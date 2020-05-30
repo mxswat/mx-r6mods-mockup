@@ -59,14 +59,6 @@ export default {
 </script>
 
 <style lang="scss">
-.source-tile {
-  text-transform: uppercase;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  display: block;
-  margin-bottom: 20px;
-}
 
 .category_name {
   text-transform: uppercase;

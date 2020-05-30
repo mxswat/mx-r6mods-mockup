@@ -17,8 +17,12 @@
     </div>
     <div class="selection-columns">
       <div class="weapons">
-        <span class="weapons-tile">WEAPONS</span>
+        <span class="column-title">WEAPONS</span>
         <NestedList :source="weapons"></NestedList>
+      </div>
+      <div class="gadgets">
+        <span class="column-title">GADGETS</span>
+        <NestedList :source="gadgets"></NestedList>
       </div>
     </div>
   </div>
@@ -26,6 +30,7 @@
 
 <script>
 import weapons from "../weapons";
+import gadgets from "../gadgets";
 import NestedList from "./NestedList";
 export default {
   name: "ModMain",
@@ -56,6 +61,7 @@ export default {
   },
   created() {
     this.weapons = weapons;
+    this.gadgets = gadgets;
   },
 };
 </script>
@@ -104,11 +110,20 @@ $secondary: #ff5722;
 }
 
 .weapons,
-.utility {
+.gadgets {
   outline: 1px solid gray;
   padding: 16px;
   max-height: 600px;
   overflow: auto;
+}
+
+.column-title {
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 20px;
 }
 
 </style>
